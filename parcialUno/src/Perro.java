@@ -6,7 +6,7 @@ public class Perro extends Mascota {
 
     @Override
     public String cuidadosATenerEnCuenta() {
-        return "Necesito que me cuiden como a un Perro";
+        return "Necesito mucha atencion y cuidado, alimento balanceado y vacunas cada 12 meses.";
     }
 
     @Override
