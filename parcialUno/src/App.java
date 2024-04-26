@@ -34,23 +34,13 @@ public class App {
         adoptar(v1, adoptante1, mascota1);
         v1.mostrarTicketAdopcion(adoptante1.getMascotaAdoptada(), adoptante1);
 
-        // Adopcion mascota ya adoptada con otro adoptante
-        adoptar(v1, adoptante2, mascota1);
-        v1.mostrarTicketAdopcion(adoptante2.getMascotaAdoptada(), adoptante2);
-
         // Adopcion mascota cuyas fechas no lo permiten
         adoptar(v1, adoptante2, mascota3);
-        v1.mostrarTicketAdopcion(adoptante2.getMascotaAdoptada(), adoptante2);
-
-        // Otra adopcion exitosa
-        adoptar(v1, adoptante2, mascota5);
         v1.mostrarTicketAdopcion(adoptante2.getMascotaAdoptada(), adoptante2);
 
     }
 
     public static void adoptar(Veterinaria v, Adoptante adoptante, Mascota mascota) {
-
         adoptante.adoptar(v, mascota.getNombre(), mascota.getRaza(), adoptante.getFechaDeAdopcion());
-
     }
 }

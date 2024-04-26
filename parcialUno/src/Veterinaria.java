@@ -30,8 +30,7 @@ public class Veterinaria implements Mostrable {
     @Override
     public void mostrarTicketAdopcion(Mascota m, Adoptante a) {
 
-
-        if (m != null) {
+        if(m != null){
             Adoptante adoptante = this.buscarAdoptante(a.getDni());
             Mascota mascota = this.buscarMascota(m.getNombre(), m.getRaza());
 
@@ -56,14 +55,9 @@ public class Veterinaria implements Mostrable {
             System.out.println("-----------------------------------------------------");
             System.out.println("\tGRACIAS POR ADOPTAR A UNA MASCOTA!! :)");
             System.out.println("-----------------------------------------------------");
-
-
-            // Este es un metodo recomendado para quitar a la mascota adoptada del listado,
-            // de lo contrario, el programa va a permitir adoptar a la misma mascota mas de 1 vez
-   
-            mascotas.remove(m);
-
         }
+
+
 
         /*
          * Muestro todo lo relacionado al ticker de adopcion
