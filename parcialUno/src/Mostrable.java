@@ -1,5 +1,5 @@
 public interface Mostrable {
 
-    void mostrarTickerAdopcion(Mascota m, Adoptante a);
+    void mostrarTicketAdopcion(Mascota m, Adoptante a);
 
 }

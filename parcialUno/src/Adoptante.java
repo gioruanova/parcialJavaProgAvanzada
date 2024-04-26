@@ -56,12 +56,14 @@ public class Adoptante {
     public boolean adoptar(Veterinaria v, String nombre, Raza raza, String fechaAdopcion) {
         Mascota mascotaEncontrada = v.buscarMascota(nombre, raza);
         if (mascotaEncontrada == null) {
-            System.out.println("La mascota no se encontra o ha sido adoptada");
+            System.out.println("\n-------\nERROR:\nLa mascota no se encontro, o ya ha sido adoptada.\n-------");
             return false;
         } else if (!(v.diferenciaMayor60Dias(mascotaEncontrada.getFechaNac(), fechaDeAdopcion))) {
-            System.out.println("Las fechas no permiten realizar la adopcion");
+            System.out.println("\n-------\nERROR:\nLas fechas no permiten realizar la adopcion.\n-------");
             return false;
         } else {
+            System.out.println("\n-------\nLa adopcion de "+mascotaEncontrada.getNombre()+" se ha realizado con exito!!!\n-------");
+
             this.mascotaAdoptada = mascotaEncontrada;
             this.fechaDeAdopcion = fechaAdopcion;
             return true;
