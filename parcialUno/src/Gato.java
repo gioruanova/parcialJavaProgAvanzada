@@ -6,7 +6,7 @@ public class Gato extends Mascota {
 
     @Override
     public String cuidadosATenerEnCuenta() {
-        return "Necesito que me cuiden como a un Gato";
+        return "Necesito poca atencion, alimento especial vacunas cada 1 año.";
     }
 
     @Override
