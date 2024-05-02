@@ -30,7 +30,7 @@ public class Veterinaria implements Mostrable {
     @Override
     public void mostrarTicketAdopcion(Mascota m, Adoptante a) {
 
-        if(m != null){
+        if (m != null) {
             Adoptante adoptante = this.buscarAdoptante(a.getDni());
             Mascota mascota = this.buscarMascota(m.getNombre(), m.getRaza());
 
@@ -57,8 +57,6 @@ public class Veterinaria implements Mostrable {
             System.out.println("-----------------------------------------------------");
         }
 
-
-
         /*
          * Muestro todo lo relacionado al ticker de adopcion
          */
@@ -78,7 +76,7 @@ public class Veterinaria implements Mostrable {
             boolean mascotaEncontrada = false;
 
             for (Mascota m : mascotas) {
-                if (m.getNombre().equals(masc.getNombre()) && m.getRaza().equals(masc.getRaza())) {
+                if (m.equals(masc)) {
                     mascotaEncontrada = true;
                     break;
                 }
@@ -127,7 +125,7 @@ public class Veterinaria implements Mostrable {
             boolean adoptanteEncontrado = false;
 
             for (Adoptante a : adoptantes) {
-                if (a.getDni().equals(adoptanteNuevo.getDni())) {
+                if (a.equals(adoptanteNuevo)) {
                     adoptanteEncontrado = true;
                     break;
                 }
@@ -146,7 +144,8 @@ public class Veterinaria implements Mostrable {
         if (validadorAdoptante(adoptanteNuevo)) {
             System.out.println("El adoptante " + adoptanteNuevo.getNombre() + " se agrego a la veterinaria.");
         } else {
-            System.out.println("El adoptante " + adoptanteNuevo.getNombre() + " ya estaba registrado en la veterinaria.");
+            System.out
+                    .println("El adoptante " + adoptanteNuevo.getNombre() + " ya estaba registrado en la veterinaria.");
         }
     }
 

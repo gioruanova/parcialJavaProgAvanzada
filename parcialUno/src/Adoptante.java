@@ -33,6 +33,15 @@ public class Adoptante {
         return mascotaAdoptada;
     }
 
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Adoptante adoptante = (Adoptante) o;
+        return this.dni == adoptante.getDni();
+    }
+
     @Override
     public String toString() {
         return "Adoptante [nombre=" + nombre + ", dni=" + dni + ", email=" + email + ", mascotaAdoptada="
@@ -62,7 +71,8 @@ public class Adoptante {
             System.out.println("\n-------\nERROR:\nLas fechas no permiten realizar la adopcion.\n-------");
             return false;
         } else {
-            System.out.println("\n-------\nLa adopcion de "+mascotaEncontrada.getNombre()+" se ha realizado con exito!!!\n-------");
+            System.out.println("\n-------\nLa adopcion de " + mascotaEncontrada.getNombre()
+                    + " se ha realizado con exito!!!\n-------");
 
             this.mascotaAdoptada = mascotaEncontrada;
             this.fechaDeAdopcion = fechaAdopcion;
