@@ -48,19 +48,6 @@ public class Adoptante {
                 + mascotaAdoptada + ", fechaDeAdopcion=" + fechaDeAdopcion + "]";
     }
 
-    public boolean test(Veterinaria v, String nombre, Raza raza, String fechaAdopcion) {
-        Mascota mascotaEncontrada = v.buscarMascota(nombre, raza);
-        if (mascotaEncontrada != null && v.diferenciaMayor60Dias(mascotaEncontrada.getFechaNac(), fechaDeAdopcion)) {
-            this.mascotaAdoptada = mascotaEncontrada;
-            this.fechaDeAdopcion = fechaAdopcion;
-
-            System.out.println("ERROR");
-            return true;
-
-        }
-        System.out.println("ERROR");
-        return false;
-    }
 
     public boolean adoptar(Veterinaria v, String nombre, Raza raza, String fechaAdopcion) {
         Mascota mascotaEncontrada = v.buscarMascota(nombre, raza);
